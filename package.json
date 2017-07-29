@@ -1,0 +1,23 @@
+{
+  "name": "soom-api",
+  "version": "1.0.0",
+  "description": "For connecting react app with db",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "keywords": [
+    "soom",
+    "fine",
+    "dust",
+    "particle"
+  ],
+  "author": "Soom team",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.4"
+  }
+}
