@@ -9,6 +9,7 @@ dustRouter
   .post(function (request, response) {
     console.log('POST /items');
     console.log("POST body : " + request.body)
+    console.log("POST location : " + request.body.location)
 
     var item = new WebDust(request.body);
 
@@ -130,9 +131,36 @@ dustRouter
   .route('/arduino/items')
   .post(function (request, response) {
 
-    console.log('POST /items');
+    console.log('POST /arduino/items for arudino');
+    var pmval = request.param("value");
+    // pmval = 40;
+    var pmgrade = "good";
+    console.log("POST /arduino/items : pmval: " + pmval );
 
-    var item = new ArduinoDust(request.body);
+    if(pmval <= 30 ) {
+        pmgrade = "good";
+    } else if (pmval > 31 && pmval <=80) {
+      pmgrade = "moderate";
+    } else if (pmval > 80 && pmval <=150) {
+      pmgrade = "unhealthy";
+    } else if (pmval > 150) {
+      pmgrade = "bad";
+    }
+    var body = {
+          "apiURL":'http://apis.com',
+          "date": new Date().toDateString(),
+          "latitude":'37.241039',
+          "location":'용인',
+          "longitude":'127.1757653',
+          "pm10_grade": pmgrade,
+          "pm10_value": pmval.toString(),
+          "show":true,
+          "timestamp": Date.now()
+    };
+    var values = JSON.stringify(body);
+    console.log("values: " + values);
+
+    var item = new ArduinoDust(body);
 
     item.save();
 
