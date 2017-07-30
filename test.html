@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Test Soom Api</title>
+  </head>
+  <body>
+    <h1>Testing Soom Api</h1>
+    <script>
+    var headers = new Headers({
+      'Access-Control-Allow-Origin':'*',
+    });
+
+    fetch('http://localhost:8080/api/web/items', {
+    	method: 'get'
+    }).then(function(response) {
+      console.log("response :" + response)
+    }).catch(function(err) {
+    	// Error :(
+    });
+  </script>
+</body>
+
+</html>

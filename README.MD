@@ -9,7 +9,7 @@ Get all Web dust items.
 + Method: `GET`
 + URL: `/api/web/items`
 
-### POST `/web/api/items`
+### POST `/api/web/items`
 
 Create a new item.
 
