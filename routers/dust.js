@@ -175,7 +175,7 @@ dustRouter
     if(pmval) {
 
       if(pmval <= 30 ) {
-          pmgrade = "좋은";
+          pmgrade = "좋음";
       } else if (pmval > 31 && pmval <=80) {
         pmgrade = "보통";
       } else if (pmval > 80 && pmval <=150) {
