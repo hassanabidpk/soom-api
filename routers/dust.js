@@ -20,6 +20,8 @@ dustRouter
   })
   .get(function (request, response) {
     var timeInMs = Date.now();
+    var today = new Date().toDateString();
+    console.log("tooday 1:" + today);
     console.log(timeInMs);
     console.log('GET /web/items');
 

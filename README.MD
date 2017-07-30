@@ -19,15 +19,15 @@ Create a new item.
 
 ```js
 {
-  "timestamp" : 1424000
+  "timestamp" : Date.now()
   "location": "1",
   "latitude": "37",
   "longitude": "127.1",
-  "date": "2017",
+  "date": new Date().toDateString(),
   "pm10_value": "41",
   "pm10_grade": "good",
-  "pm25_value": "41",
-  "pm25_grade": "good",
+  "apiURL": "http://www.google.com",
+  "show": true,
 }
 ```
 
