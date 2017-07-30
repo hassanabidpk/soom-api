@@ -7,17 +7,20 @@ var dustRouter = express.Router();
 dustRouter
   .route('/web/items')
   .post(function (request, response) {
-
     console.log('POST /items');
+    console.log("POST body : " + request.body)
 
     var item = new WebDust(request.body);
 
     item.save();
 
+    console.log("saved item : " + item);
+
     response.status(201).send(item);
   })
   .get(function (request, response) {
-
+    var timeInMs = Date.now();
+    console.log(timeInMs);
     console.log('GET /web/items');
 
     WebDust.find(function (error, items) {

@@ -17,8 +17,7 @@ ArduinoDust.add({
     date: Date,
     pm10_value: String,
     pm10_grade: String,
-    pm25_value: String,
-    pm25_grade: String
+    show: Boolean
 
 });
 
