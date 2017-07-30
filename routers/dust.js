@@ -175,13 +175,13 @@ dustRouter
     if(pmval) {
 
       if(pmval <= 30 ) {
-          pmgrade = "good";
+          pmgrade = "좋은";
       } else if (pmval > 31 && pmval <=80) {
-        pmgrade = "moderate";
+        pmgrade = "보통";
       } else if (pmval > 80 && pmval <=150) {
-        pmgrade = "unhealthy";
+        pmgrade = "약간 나쁨";
       } else if (pmval > 150) {
-        pmgrade = "bad";
+        pmgrade = "아주 나쁨";
       }
       var body = {
             "apiURL":'http://apis.com',
